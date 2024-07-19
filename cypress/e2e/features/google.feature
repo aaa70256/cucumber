@@ -5,7 +5,9 @@ Feature: Google Search
   Scenario: Home Page
     When Login infomation is "<userName>" and "<password>"
     Then click on submit button
-    Then verify title should be 'Login Successfully'
+
+    #版本問題JS無法寫And但feature沒影響
+    And  verify title should be 'Login Successfully'
 
     @test
     Examples:
